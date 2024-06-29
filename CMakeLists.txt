@@ -1,6 +1,6 @@
 
 # Xenial requires 3.5, Bionic 3.10...
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.12.0)
 
 set( LRS_TARGET realsense2 )
 project( ${LRS_TARGET} LANGUAGES CXX C )

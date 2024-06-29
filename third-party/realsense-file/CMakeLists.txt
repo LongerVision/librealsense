@@ -20,7 +20,7 @@ source_group("Source Files\\lz4" FILES
         lz4/lz4.c
         )
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME} SHARED
     ${AllSources}
     ${HEADER_FILES_ROSBAG}
     ${SOURCE_FILES_ROSBAG}
