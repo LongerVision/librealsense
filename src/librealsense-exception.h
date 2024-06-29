@@ -9,6 +9,9 @@
 
 #include <exception>
 #include <string>
+#include <iostream>
+#include <cerrno>  // For errno
+#include <cstring> // For strerror
 
 
 namespace librealsense {

@@ -18,7 +18,7 @@ set(REALSENSE_GL_CPP
     realsense-gl.def
     ../../include/librealsense2-gl/rs_processing_gl.h
     ../../include/librealsense2-gl/rs_processing_gl.hpp
-    ../../third-party/glad/glad.c
+    # ../../third-party/glad/glad.c
     ../../common/opengl3.cpp
     ../../common/opengl3.h
     pc-shader.cpp

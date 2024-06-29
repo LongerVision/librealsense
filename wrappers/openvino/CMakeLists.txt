@@ -1,5 +1,5 @@
 #  minimum required cmake version: 3.1.0
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.12.0)
 
 project(RealsenseOpenVINOSamples)
 
@@ -59,11 +59,11 @@ if(OPENVINO2019)
 endif()
 
 # And they make use of ELPP (EasyLogging++):
-include_directories( ../../third-party/easyloggingpp/src )
-set( ELPP_FILES
-    ../../../third-party/easyloggingpp/src/easylogging++.cc
-    ../../../third-party/easyloggingpp/src/easylogging++.h
-)
+# include_directories( ../../third-party/easyloggingpp/src )
+# set( ELPP_FILES
+#     ../../../third-party/easyloggingpp/src/easylogging++.cc
+#     ../../../third-party/easyloggingpp/src/easylogging++.h
+# )
 # The individual examples should use the above like this:
 #     add_executable( <exe> <source files ...> ${OPENVINO_FILES} ${ELPP_FILES} )
 #     source_group("OpenVINO" FILES ${OPENVINO_FILES})

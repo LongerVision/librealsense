@@ -7,6 +7,7 @@
 #include "hid-device-info.h"
 #include <src/librealsense-exception.h>
 
+#include <algorithm>
 
 namespace librealsense {
 namespace platform {
@@ -94,7 +95,7 @@ void trim_device_list( std::vector< usb_device_info > & devices, const std::vect
 
     auto was_chosen = [&chosen]( const usb_device_info & info )
     {
-        return find( chosen.begin(), chosen.end(), info ) != chosen.end();
+        return std::find( chosen.begin(), chosen.end(), info ) != chosen.end();
     };
     devices.erase( std::remove_if( devices.begin(), devices.end(), was_chosen ), devices.end() );
 }

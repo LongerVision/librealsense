@@ -3,7 +3,7 @@
 
 #ifdef BUILD_EASYLOGGINGPP
 #ifndef NO_ELPP_INIT
-#include <third-party/easyloggingpp/src/easylogging++.h>
+#include <easylogging++.h>
 
 // ELPP requires static initialization, otherwise nothing will work:
 //

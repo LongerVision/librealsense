@@ -6,7 +6,7 @@
 #include <librealsense2/rsutil.h>
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include <stb_image_write.h>
+#include <stb/stb_image_write.h>
 #include <int-rs-splash.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION

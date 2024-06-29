@@ -21,7 +21,7 @@ Copyright(c) 2017 Intel Corporation. All Rights Reserved. */
 #include <src/platform/command-transfer.h>
 #include <src/platform/hid-device.h>
 #include "pybackend_extras.h"
-#include "../../third-party/stb_image_write.h"
+#include <stb/stb_image_write.h>
 
 #include <sstream>
 #include <vector>

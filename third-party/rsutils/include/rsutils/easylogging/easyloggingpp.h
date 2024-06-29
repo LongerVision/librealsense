@@ -19,7 +19,7 @@
 // and then use '${ELPP_SOURCES}' and '${ELPP_INCLUDES}' CMake variable to add to your target
 
 #if BUILD_EASYLOGGINGPP
-#include <third-party/easyloggingpp/src/easylogging++.h>
+#include <easylogging++.h>
 
 
 #define LIBREALSENSE_ELPP_ID "librealsense"

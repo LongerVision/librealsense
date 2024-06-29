@@ -1,5 +1,5 @@
 #  minimum required cmake version: 3.1.0
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.12.0)
 
 project(RealsensePythonWrappers)
 
@@ -106,12 +106,12 @@ if(APPLE)
 endif()
 endif()
 
-if(${BUILD_EASYLOGGINGPP})
-    list(APPEND RAW_RS
-        ../../third-party/easyloggingpp/src/easylogging++.h
-        ../../third-party/easyloggingpp/src/easylogging++.cc
-    )
-endif()
+# if(${BUILD_EASYLOGGINGPP})
+#    list(APPEND RAW_RS
+#        ../../third-party/easyloggingpp/src/easylogging++.h
+#        ../../third-party/easyloggingpp/src/easylogging++.cc
+#    )
+# endif()
 
 if(${BACKEND} STREQUAL RS2_USE_WINUSB_UVC_BACKEND)
     list(APPEND RAW_RS
