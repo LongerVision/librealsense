@@ -3,6 +3,7 @@
 
 #include <rsutils/os/special-folder.h>
 #include <rsutils/easylogging/easyloggingpp.h>
+#include <stdexcept>  // Include this at the top of your file
 
 #ifdef _WIN32
 
