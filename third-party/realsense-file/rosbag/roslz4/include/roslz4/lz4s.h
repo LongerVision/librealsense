@@ -35,7 +35,7 @@
 #ifndef ROSLZ4_LZ4S_H
 #define ROSLZ4_LZ4S_H
 
-#include "../../../../lz4/lz4.h"
+#include "lz4.h"
 
 #ifdef __cplusplus
 extern "C" {
