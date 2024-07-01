@@ -31,8 +31,8 @@ set(REALSENSE_GL_CPP
     colorizer-gl.cpp
     align-gl.h
     align-gl.cpp
-    ${LZ4_DIR}/lz4.h
-    ${LZ4_DIR}/lz4.c
+    # ${LZ4_DIR}/lz4.h
+    # ${LZ4_DIR}/lz4.c
 )
 
 set(REALSENSE_GL_PUBLIC_HEADERS
@@ -44,9 +44,9 @@ set(CMAKECONFIG_GL_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${LRS_GL_TARGET}")
 
 include(${CMAKE_SOURCE_DIR}/CMake/opengl_config.cmake)
 
-if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
-    list(APPEND REALSENSE_GL_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
-endif()
+# if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
+#     list(APPEND REALSENSE_GL_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
+# endif()
 
 source_group("3rd Party" FILES
     ../../third-party/glad/glad.c)
