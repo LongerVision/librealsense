@@ -13,9 +13,13 @@ endif()
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
+# Find the installed packages using pkg-config
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(EASYLOGGINGPP REQUIRED easyloggingpp)
+
 include_directories(${CMAKE_BINARY_DIR})
 
-using_easyloggingpp( ${PROJECT_NAME} SHARED )
+# using_easyloggingpp( ${PROJECT_NAME} SHARED )
 
 include(../../common/CMakeLists.txt)
 
