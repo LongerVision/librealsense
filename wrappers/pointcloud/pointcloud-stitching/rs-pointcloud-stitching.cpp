@@ -10,7 +10,7 @@
 #include <int-rs-splash.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <stb/stb_image.h>
 #include <fstream>
 #include <regex>
 #include <thread>
