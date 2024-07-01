@@ -20,7 +20,7 @@ include_directories(rs-embed
                     # ${LZ4_DIR} 
                     # ../../third-party
                     )
-target_link_libraries( rs-embed PRIVATE tclap )
+# target_link_libraries( rs-embed PRIVATE tclap )
 set_target_properties (rs-embed PROPERTIES FOLDER Tools)
 
 
