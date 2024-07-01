@@ -18,7 +18,7 @@
 
 // We use STB image to load the splash-screen from memory
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <stb/stb_image.h>
 // int-rs-splash.hpp contains the PNG image from res/int-rs-splash.png
 #include "res/int-rs-splash.hpp"
 #include "res/icon.h"

@@ -4,7 +4,7 @@
 #include "skybox.h"
 #include "rendering.h"
 
-#include <stb_image.h>
+#include <stb/stb_image.h>
 
 #include "res/nx.h"
 #include "res/ny.h"
