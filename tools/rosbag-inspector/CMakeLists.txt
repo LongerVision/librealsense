@@ -48,7 +48,11 @@ if(BUILD_GRAPHICAL_EXAMPLES)
         FOLDER Tools
     )
 
-    using_easyloggingpp( rs-rosbag-inspector SHARED )
+    # Find the installed packages using pkg-config
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(EASYLOGGINGPP REQUIRED easyloggingpp)
+
+    # using_easyloggingpp( rs-rosbag-inspector SHARED )
 
     install(
         TARGETS
