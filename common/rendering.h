@@ -233,7 +233,7 @@ namespace rs2
     // Simple font loading code //
     //////////////////////////////
 
-#include "../third-party/stb_easy_font.h"
+#include "stb/stb_easy_font.h"
 
     inline void draw_text(int x, int y, const char * text)
     {
