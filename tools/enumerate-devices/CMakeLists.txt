@@ -7,7 +7,7 @@ project(RealsenseExamplesEnumerateDevices)
 
 add_executable(rs-enumerate-devices rs-enumerate-devices.cpp)
 set_property(TARGET rs-enumerate-devices PROPERTY CXX_STANDARD 11)
-target_link_libraries( rs-enumerate-devices ${DEPENDENCIES} tclap )
+target_link_libraries( rs-enumerate-devices ${DEPENDENCIES}  )
 set_target_properties (rs-enumerate-devices PROPERTIES
     FOLDER Tools
 )

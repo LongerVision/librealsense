@@ -221,11 +221,11 @@ source_group("SW-Update" FILES ${SW_UPDATE_FILES})
 
 include_directories(
     ../../common
-    ../../third-party
-    ../../third-party/tinyfiledialogs
-    ${GLFW_SOURCE_DIR}/include
-    ../../third-party/imgui
-    ../../third-party/glad
+    # ../../third-party
+    # ../../third-party/tinyfiledialogs
+    # ${GLFW_SOURCE_DIR}/include
+    # ../../third-party/imgui
+    # ../../third-party/glad
     )
 
 

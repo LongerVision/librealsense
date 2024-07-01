@@ -20,7 +20,7 @@ add_executable(${RS_TARGET} rs-convert.cpp
     converters/converter-raw.hpp
 )
 set_property(TARGET ${RS_TARGET} PROPERTY CXX_STANDARD 11)
-target_link_libraries( ${RS_TARGET} ${DEPENDENCIES} Threads::Threads tclap )
+target_link_libraries( ${RS_TARGET} ${DEPENDENCIES} Threads::Threads lz4)
 include_directories(../../common ../../third-party)
 
 set_target_properties (${RS_TARGET} PROPERTIES
