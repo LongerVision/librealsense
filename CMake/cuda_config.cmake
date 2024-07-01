@@ -1,5 +1,5 @@
 info("Building with CUDA requires CMake v3.8+")
-cmake_minimum_required(VERSION 3.8.0)
+cmake_minimum_required(VERSION 3.12.0)
 enable_language( CUDA )
 
 find_package(CUDA REQUIRED)
@@ -12,4 +12,4 @@ message(STATUS "CUDA_LIBRARIES: ${CUDA_INCLUDE_DIRS} ${ALL_CUDA_LIBS}")
 
 set(CUDA_PROPAGATE_HOST_FLAGS OFF)
 set(CUDA_SEPARABLE_COMPILATION ON)
-set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}; -O3 -gencode arch=compute_53,code=sm_53 -gencode arch=compute_62,code=sm_62;")
+set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}; -O3 -gencode arch=compute_86,code=sm_86;")
