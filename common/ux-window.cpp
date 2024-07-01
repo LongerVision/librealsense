@@ -371,7 +371,7 @@ namespace rs2
 
         setup_icon();
 
-        ImGui_ImplGlfw_Init(_win, true);
+        ImGui_ImplGlfw_InitForOpenGL(_win, true);
 
         if (_use_glsl_render)
             _2d_vis = std::make_shared<visualizer_2d>(std::make_shared<splash_screen_shader>());
@@ -743,7 +743,9 @@ namespace rs2
         ImGui::GetIO().MouseWheel = _mouse.ui_wheel;
         _mouse.ui_wheel = 0.f;
 
-        ImGui_ImplGlfw_NewFrame(_scale_factor);
+        // ImGui_ImplGlfw_NewFrame(_scale_factor);
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::GetIO().FontGlobalScale = _scale_factor;
         //ImGui::NewFrame();
     }
 
