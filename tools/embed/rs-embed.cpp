@@ -11,7 +11,7 @@
 #include <lz4.h>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <stb/stb_image.h>
 
 
 #define RS_EMBED_VERSION "0.0.0.2"
