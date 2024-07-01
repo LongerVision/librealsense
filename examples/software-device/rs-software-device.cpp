@@ -10,7 +10,7 @@
 #include <int-rs-splash.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <stb/stb_image.h>
 
 const int W = 640;
 const int H = 480;
