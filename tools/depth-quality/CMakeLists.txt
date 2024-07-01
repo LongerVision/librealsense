@@ -38,14 +38,14 @@ if(BUILD_GRAPHICAL_EXAMPLES)
         depth-quality-model.cpp
         depth-metrics.h
         ../../common/realsense-ui-advanced-mode.h
-        ../../third-party/imgui/imgui.cpp
-        ../../third-party/imgui/imgui_draw.cpp
-        ../../third-party/imgui/imgui_impl_glfw.cpp
-        ../../third-party/imgui/imgui-fonts-karla.hpp
-        ../../third-party/imgui/imgui-fonts-fontawesome.hpp
-        ../../third-party/glad/glad.c
-        ../../third-party/tinyfiledialogs/tinyfiledialogs.c
-        ../../third-party/tinyfiledialogs/tinyfiledialogs.h
+        # ../../third-party/imgui/imgui.cpp
+        # ../../third-party/imgui/imgui_draw.cpp
+        # ../../third-party/imgui/imgui_impl_glfw.cpp
+        # ../../third-party/imgui/imgui-fonts-karla.hpp
+        # ../../third-party/imgui/imgui-fonts-fontawesome.hpp
+        # ../../third-party/glad/glad.c
+        # ../../third-party/tinyfiledialogs/tinyfiledialogs.c
+        # ../../third-party/tinyfiledialogs/tinyfiledialogs.h
         )
 
     if(WIN32)
@@ -62,14 +62,14 @@ if(BUILD_GRAPHICAL_EXAMPLES)
                 ${CMAKE_CURRENT_SOURCE_DIR}/res/resource.h
                 ${CMAKE_CURRENT_SOURCE_DIR}/res/realsense-viewer.rc)
 
-        source_group("3rd Party" FILES
-            ../../third-party/tinyfiledialogs/tinyfiledialogs.c
-            ../../third-party/tinyfiledialogs/tinyfiledialogs.h
-            ../../third-party/imgui/imgui.cpp
-            ../../third-party/imgui/imgui_draw.cpp
-            ../../third-party/imgui/imgui_impl_glfw.cpp
-            ../../third-party/imgui/imgui-fonts-karla.hpp
-            ../../third-party/imgui/imgui-fonts-fontawesome.hpp)
+        # source_group("3rd Party" FILES
+        #     ../../third-party/tinyfiledialogs/tinyfiledialogs.c
+        #     ../../third-party/tinyfiledialogs/tinyfiledialogs.h
+        #     ../../third-party/imgui/imgui.cpp
+        #     ../../third-party/imgui/imgui_draw.cpp
+        #     ../../third-party/imgui/imgui_impl_glfw.cpp
+        #     ../../third-party/imgui/imgui-fonts-karla.hpp
+        #     ../../third-party/imgui/imgui-fonts-fontawesome.hpp)
 
         source_group("Utils" FILES
             depth-quality-model.h
@@ -78,9 +78,9 @@ if(BUILD_GRAPHICAL_EXAMPLES)
             ${COMMON_SRC})
 
         include_directories(../../common  ../../third-party
-                            ../../third-party/imgui
-                            ../../third-party/glad
-                            ../../third-party/tinyfiledialogs
+                            # ../../third-party/imgui
+                            # ../../third-party/glad
+                            # ../../third-party/tinyfiledialogs
                             ${CMAKE_CURRENT_SOURCE_DIR}/res/)
 
         #list(TRANSFORM DELAYED PREPEND " /DELAYLOAD:")
@@ -96,9 +96,10 @@ if(BUILD_GRAPHICAL_EXAMPLES)
             )
 
         include_directories(../../common  ../../third-party
-                            ../../third-party/imgui
-                            ../../third-party/glad
-                            ../../third-party/tinyfiledialogs )
+                            # ../../third-party/imgui
+                            # ../../third-party/glad
+                            # ../../third-party/tinyfiledialogs 
+                            )
     endif()
 
     source_group("SW-Update" FILES ${SW_UPDATE_FILES})

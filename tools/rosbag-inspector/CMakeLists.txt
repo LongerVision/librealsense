@@ -15,24 +15,31 @@ if(BUILD_GRAPHICAL_EXAMPLES)
             rosbag_content.h
             ../../common/os.h
             ../../common/os.cpp
-            ../../third-party/glad/glad.c
-            ../../third-party/imgui/imgui.cpp
-            ../../third-party/imgui/imgui_draw.cpp
-            ../../third-party/imgui/imgui_impl_glfw.cpp
-            ../../third-party/imgui/imgui-fonts-karla.hpp
-            ../../third-party/imgui/imgui-fonts-fontawesome.hpp
-            ../../third-party/tinyfiledialogs/tinyfiledialogs.c
-            ../../third-party/tinyfiledialogs/tinyfiledialogs.h
+            # ../../third-party/glad/glad.c
+            # ../../third-party/imgui/imgui.cpp
+            # ../../third-party/imgui/imgui_draw.cpp
+            # ../../third-party/imgui/imgui_impl_glfw.cpp
+            # ../../third-party/imgui/imgui-fonts-karla.hpp
+            # ../../third-party/imgui/imgui-fonts-fontawesome.hpp
+            # ../../third-party/tinyfiledialogs/tinyfiledialogs.c
+            # ../../third-party/tinyfiledialogs/tinyfiledialogs.h
         )
 
     if(WIN32)
         add_executable(rs-rosbag-inspector WIN32 ${RS_ROSBAG_INSPECTOR_CPP})
-        include_directories(../../third-party/imgui ../../common ../../third-party/glad
-                                             ../../third-party/tinyfiledialogs ../../third-party ${CMAKE_CURRENT_SOURCE_DIR}/res/)
+        include_directories(../../common
+                            # ../../third-party/imgui 
+                            # ../../third-party/glad
+                            # ../../third-party/tinyfiledialogs 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/res/)
     else()
         add_executable(rs-rosbag-inspector ${RS_ROSBAG_INSPECTOR_CPP})
-        include_directories(../../third-party/imgui ../../common ../../third-party/glad
-                                             ../../third-party/tinyfiledialogs ../../third-party)
+        include_directories(
+                            ../../common
+                            # ../../third-party/imgui 
+                            # ../../third-party/glad
+                            # ../../third-party/tinyfiledialogs 
+                            ../../third-party)
     endif()
     set_property(TARGET rs-rosbag-inspector PROPERTY CXX_STANDARD 11)
 
