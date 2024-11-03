@@ -40,7 +40,7 @@
 #include "ds5-thermal-monitor.h"
 #include "../common/fw/firmware-version.h"
 #include "fw-update/fw-update-unsigned.h"
-#include "../third-party/json.hpp"
+#include "nlohmann/json.hpp"
 
 #ifdef HWM_OVER_XU
 constexpr bool hw_mon_over_xu = true;

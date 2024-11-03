@@ -2,7 +2,7 @@
 // Copyright(c) 2016 Intel Corporation. All Rights Reserved.
 
 #include <numeric>
-#include "../third-party/json.hpp"
+#include "nlohmann/json.hpp"
 #include "ds5-device.h"
 #include "ds5-private.h"
 #include "ds5-thermal-monitor.h"
