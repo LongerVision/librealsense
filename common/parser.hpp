@@ -15,7 +15,7 @@
 #include "android_helpers.h"
 #endif
 
-#include "../third-party/rapidxml/rapidxml.hpp"
+#include "rapidxml/rapidxml.hpp"
 #include "./utilities/string/string-utilities.h"
 
 #define MAX_PARAMS 4
