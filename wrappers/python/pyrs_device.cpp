@@ -1,6 +1,7 @@
 /* License: Apache 2.0. See LICENSE file in root directory.
 Copyright(c) 2017 Intel Corporation. All Rights Reserved. */
 
+#include <iostream>
 #include "python.hpp"
 #include <librealsense2/hpp/rs_internal.hpp>
 #include <librealsense2/hpp/rs_device.hpp>

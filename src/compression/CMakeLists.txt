@@ -22,7 +22,7 @@ add_library(${PROJECT_NAME} STATIC ${COMPRESSION_SOURCES})
 include_directories(
     ../../common
     ../ipDeviceCommon
-    ../../third-party/easyloggingpp/src
+    # ../../third-party/easyloggingpp/src
 )
 
 #Disabled due to CMake 3.5.1 compatibility

@@ -18,7 +18,7 @@ Copyright(c) 2017 Intel Corporation. All Rights Reserved. */
 #include "core/info.h"   // Workaround for the missing DLL_EXPORT template
 #include "../src/backend.h"
 #include "pybackend_extras.h"
-#include "../../third-party/stb_image_write.h"
+#include "stb/stb_image_write.h"
 
 #include <sstream>
 #include <vector>

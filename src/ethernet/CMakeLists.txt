@@ -10,7 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 add_definitions(-DNEWLOCALE_NOT_USED=1 -DBSD=1 -DSOCKLEN_T=socklen_t -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1 -DALLOW_RTSP_SERVER_PORT_REUSE=1 -DNO_OPENSSL=1)
 
-set(LIVE ${CMAKE_BINARY_DIR}/third-party/live)
+# set(LIVE ${CMAKE_BINARY_DIR}/third-party/live)
 
 file(GLOB REALSENSE_NET_CPP
     "*.h*"
@@ -25,9 +25,9 @@ file(GLOB REALSENSE_NET_CPP
 )
 list(REMOVE_ITEM REALSENSE_NET_CPP "${LIVE}/liveMedia/ADTSAudioStreamDiscreteFramer.cpp")
 
-if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
-    list(APPEND REALSENSE_NET_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
-endif()
+# if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
+#     list(APPEND REALSENSE_NET_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
+# endif()
 add_definitions(-DELPP_NO_DEFAULT_LOG_FILE)
 
 add_library(${PROJECT_NAME} ${REALSENSE_NET_CPP})
@@ -42,7 +42,7 @@ set(CMAKECONFIG_NET_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 include_directories(${PROJECT_NAME}
     ../../common
     ../ipDeviceCommon
-    ../../third-party/easyloggingpp/src
+    # ../../third-party/easyloggingpp/src
     ${LIVE}/groupsock/include
     ${LIVE}/liveMedia/include
     ${LIVE}/UsageEnvironment/include

@@ -99,7 +99,7 @@ macro(global_set_flags)
 endmacro()
 
 macro(global_target_config)
-    target_link_libraries(${LRS_TARGET} PRIVATE realsense-file ${CMAKE_THREAD_LIBS_INIT})
+    target_link_libraries(${LRS_TARGET} PRIVATE realsense-file ${CMAKE_THREAD_LIBS_INIT} -lsqlite3)
 
     set_target_properties (${LRS_TARGET} PROPERTIES FOLDER Library)
 

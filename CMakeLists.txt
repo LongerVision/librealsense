@@ -2,6 +2,12 @@
 cmake_minimum_required(VERSION 3.1.0)
 project(librealsense2 LANGUAGES CXX C)
 
+if(NOT DEFINED ${CMAKE_CUDA_ARCHITECTURES})
+    set(CMAKE_CUDA_ARCHITECTURES 86)
+endif()
+message(STATUS "CUDA architectures set to ${CMAKE_CUDA_ARCHITECTURES}")
+
+
 include(CMake/lrs_options.cmake)
 include(CMake/connectivity_check.cmake)
 #Deprecation message, should be removed in future releases
@@ -64,6 +70,9 @@ include(common/utilities/CMakeLists.txt)
 # configure the project according to OS specific requirments
 # macro definition located at "CMake/<OS>_config.cmake"
 os_target_config()
+
+find_package(PkgConfig)
+pkg_search_module(SQLITE3 REQUIRED sqlite3)
 
 # global project configuration
 # macro definition located at "CMake/global_config.cmake"

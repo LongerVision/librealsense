@@ -8,28 +8,29 @@ if (NOT BUILD_PYTHON_BINDINGS)
 endif()
 
 set(DEPENDENCIES realsense2)
+find_package(pybind11 REQUIRED)
 # In order for the external project clone to occur during cmake configure step(rather than during compilation, as would normally happen),
 # we copy the external project declaration to the build folder and then execute it
-configure_file(${CMAKE_SOURCE_DIR}/third-party/pybind11/CMakeLists.txt ${CMAKE_BINARY_DIR}/external-projects/pybind11/CMakeLists.txt)
-execute_process(COMMAND "${CMAKE_COMMAND}" -G "${CMAKE_GENERATOR}" .
-    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external-projects/pybind11"
-)
-execute_process(COMMAND "${CMAKE_COMMAND}" --build .
-    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external-projects/pybind11"
-)
+# configure_file(${CMAKE_SOURCE_DIR}/third-party/pybind11/CMakeLists.txt ${CMAKE_BINARY_DIR}/external-projects/pybind11/CMakeLists.txt)
+# execute_process(COMMAND "${CMAKE_COMMAND}" -G "${CMAKE_GENERATOR}" .
+#     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external-projects/pybind11"
+# )
+# execute_process(COMMAND "${CMAKE_COMMAND}" --build .
+#     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external-projects/pybind11"
+# )
 
-# Add pybind11 makefile
-add_subdirectory("${CMAKE_BINARY_DIR}/third-party/pybind11"
-                 "${CMAKE_BINARY_DIR}/third-party/pybind11"
-                 EXCLUDE_FROM_ALL
-)
+# # Add pybind11 makefile
+# add_subdirectory("${CMAKE_BINARY_DIR}/third-party/pybind11"
+#                  "${CMAKE_BINARY_DIR}/third-party/pybind11"
+#                  EXCLUDE_FROM_ALL
+# )
 
 set(PYBIND11_CPP_STANDARD -std=c++11)
 # Force Pybind11 not to share pyrealsense2 resources with other pybind modules.
 # With this definition we force the ABI version to be unique and not risk crashes on different modules.
 # (workaround for RS5-10582; see also https://github.com/pybind/pybind11/issues/2898)
 add_definitions(-DPYBIND11_COMPILER_TYPE="_librs_abi")
-include_directories(${CMAKE_BINARY_DIR}/third-party/pybind11/include)
+# include_directories(${CMAKE_BINARY_DIR}/third-party/pybind11/include)
 
 set(PYRS_CPP
     python.cpp

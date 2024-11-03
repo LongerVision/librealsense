@@ -6,6 +6,7 @@
 #include <map>
 #include "types.h"
 #include "context.h"
+#include "environment.h"
 #include "ds5/ds5-options.h"
 #include "media/ros/ros_reader.h"
 

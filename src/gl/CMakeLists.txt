@@ -18,7 +18,7 @@ set(REALSENSE_GL_CPP
     realsense-gl.def
     ../../include/librealsense2-gl/rs_processing_gl.h
     ../../include/librealsense2-gl/rs_processing_gl.hpp
-    ../../third-party/glad/glad.c
+    # ../../third-party/glad/glad.c
     ../../common/opengl3.cpp
     ../../common/opengl3.h
     pc-shader.cpp
@@ -44,12 +44,12 @@ set(CMAKECONFIG_GL_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${LRS_GL_TARGET}")
 
 include(${CMAKE_SOURCE_DIR}/CMake/opengl_config.cmake)
 
-if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
-    list(APPEND REALSENSE_GL_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
-endif()
+# if (${BUILD_SHARED_LIBS} AND ${BUILD_EASYLOGGINGPP})
+#     list(APPEND REALSENSE_GL_CPP ../../third-party/easyloggingpp/src/easylogging++.cc)
+# endif()
 
-source_group("3rd Party" FILES
-    ../../third-party/glad/glad.c)
+# source_group("3rd Party" FILES
+#     ../../third-party/glad/glad.c)
 
 source_group("API" FILES
     ../../include/librealsense2-gl/rs_processing_gl.h

@@ -3,13 +3,16 @@
 
 #include <cmath>
 #include "playback_device.h"
+#include "core/serialization.h"
 #include "core/motion.h"
+#include "l500/l500-depth.h"
 #include "stream.h"
 #include "media/ros/ros_reader.h"
 #include "environment.h"
 #include "sync.h"
 
 using namespace librealsense;
+using namespace librealsense::device_serializer;
 
 static bool is_video_stream( rs2_stream stream )
 {
@@ -35,7 +38,7 @@ playback_device::playback_device(std::shared_ptr<context> ctx, std::shared_ptr<d
     (*m_read_thread)->start();
 
     //Read header and build device from recorded device snapshot
-    m_device_description = m_reader->query_device_description(nanoseconds(0));
+    m_device_description = m_reader->query_device_description(std::chrono::nanoseconds(0));
 
     register_device_info(m_device_description);
     //Create playback sensor that simulate the recorded sensors
